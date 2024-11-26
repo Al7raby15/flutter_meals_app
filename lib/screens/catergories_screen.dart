@@ -5,10 +5,9 @@ import 'package:meals_app/widgets/category_grid_item.dart';
 
 class CatergoriesScreen extends StatelessWidget {
   const CatergoriesScreen(
-      {super.key, required this.onToggle, required this.avaliableMeals});
+      {super.key,  required this.avaliableMeals});
 
   final List<Meal> avaliableMeals;
-  final void Function(Meal meal) onToggle;
   @override
   Widget build(BuildContext context) {
     return GridView(
@@ -23,7 +22,6 @@ class CatergoriesScreen extends StatelessWidget {
         for (final category in availableCategories)
           CategoryGridItem(
             category: category,
-            onToggle: onToggle,
             avialableMeals: avaliableMeals,
           ),
       ],

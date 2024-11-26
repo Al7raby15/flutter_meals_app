@@ -5,10 +5,9 @@ import 'package:meals_app/screens/meals_screen.dart';
 
 class CategoryGridItem extends StatelessWidget {
   const CategoryGridItem(
-      {super.key, required this.category, required this.onToggle,required this.avialableMeals});
+      {super.key, required this.category, required this.avialableMeals});
 
   final Category category;
-  final void Function(Meal meal) onToggle;
   final List<Meal> avialableMeals;
   @override
   Widget build(BuildContext context) {
@@ -27,7 +26,6 @@ class CategoryGridItem extends StatelessWidget {
                 builder: (context) => MealsScreen(
                       meals: filteredMeal,
                       title: category.title,
-                      onToggle: onToggle,
                     )));
       },
       splashColor: Theme.of(context).primaryColor,
