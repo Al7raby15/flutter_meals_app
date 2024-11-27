@@ -5,7 +5,6 @@ import 'package:meals_app/screens/favorite_screen.dart';
 import 'package:meals_app/screens/filters_screen.dart';
 import 'package:meals_app/widgets/main_drawer.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../provider/meals_provider.dart';
 import 'package:meals_app/provider/filters_provider.dart';
 
 const kInitialFilters = {
