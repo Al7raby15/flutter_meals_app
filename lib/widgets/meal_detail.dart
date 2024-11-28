@@ -13,12 +13,15 @@ class MealDetail extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          FadeInImage(
-            placeholder: MemoryImage(kTransparentImage),
-            image: NetworkImage(meal.imageUrl, scale: 0.1),
-            fit: BoxFit.cover,
-            height: 250,
-            width: double.infinity,
+          Hero(
+            tag: meal.id,
+            child: FadeInImage(
+              placeholder: MemoryImage(kTransparentImage),
+              image: NetworkImage(meal.imageUrl, scale: 0.1),
+              fit: BoxFit.cover,
+              height: 250,
+              width: double.infinity,
+            ),
           ),
           const SizedBox(
             height: 20,
